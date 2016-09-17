@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let todo of todos">
+    <todo-item [todo]="todo"
+               (change)="onTodoChange(todo)"
+               (onDeleted)="onTodoDelete($event)"
+    ></todo-item>
+  </li>
+</ul>
+<input type="text" [(ngModel)]="newTodoMsg" />
+<button type="button" (click)="addNewTodo(newTodoMsg)">Add</button>

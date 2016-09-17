@@ -1,0 +1,12 @@
+<input type="checkbox" [(ngModel)]="todo.completed">
+<input type="text" 
+       [(ngModel)]="todo.message"
+       *ngIf="!todo.completed"
+>
+<s *ngIf="todo.completed">
+  {{todo.message}}
+</s>
+
+<button (click)="onDeleteTodo(todo)">
+  Delete
+</button>
